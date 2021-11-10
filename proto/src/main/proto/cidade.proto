@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message cidadeDTO {
+    int64 id = 1;
+    string descricao = 2;
+}
+
+message cidadeRequest {
+    int64 codigo =1;
+}
+message cidadeResponse {
+    repeated cidadeDTO cargos =1;
+}
+
+message emptyCargo {}
+
+service CategoriaService {
+    rpc obterCidades(emptyCargo) returns (cidadeDTO);
+}

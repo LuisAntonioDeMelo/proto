@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.grpc.proto";
+
+message PagamentoDTO {
+    int64 id = 1;
+    string descricao = 2;
+}
+
+message PagamentoRequest {
+    int64 codigo =1;
+}
+message PagamentoResponse {
+    repeated PagamentoDTO pagamentos =1;
+}
+
+message emptyPagamento {}
+
+service OrcamentoService {
+    rpc salvarPagamento(PagamentoDTO) returns (PagamentoDTO);
+    rpc obterOrcamentos(emptyPagamento) returns (PagamentoResponse);
+}
