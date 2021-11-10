@@ -38,5 +38,4 @@ service LancamentoService {
   rpc obterLancamento(LancamentoResquest) returns (LancamentoResponse);
   rpc salvarLancamento(LancamentoDTO) returns (LancamentoResponse);
   rpc listar(emptyRequest) returns (LancamentosResponse);
-
 }

@@ -12,12 +12,12 @@ message clienteRequest {
     int64 codigo =1;
 }
 message clienteResponse {
-    repeated clienteDTO cargos =1;
+    repeated clienteDTO clientes =1;
 }
 
-message emptyCargo {}
+message emptyCliente {}
 
 service ClienteService {
     rpc salvarCliente(clienteDTO) returns (clienteDTO);
-    rpc obterClientes(emptyCargo) returns (clienteResponse);
+    rpc obterClientes(emptyCliente) returns (clienteResponse);
 }

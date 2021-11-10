@@ -9,14 +9,14 @@ message cidadeDTO {
 }
 
 message cidadeRequest {
-    int64 codigo =1;
+    int64 a =1;
 }
 message cidadeResponse {
-    repeated cidadeDTO cargos =1;
+    repeated cidadeDTO cidades =1;
 }
 
-message emptyCargo {}
+message emptyCidade {}
 
-service CategoriaService {
-    rpc obterCidades(emptyCargo) returns (cidadeDTO);
+service CidadeService {
+    rpc obterCidades(emptyCidade) returns (cidadeDTO);
 }

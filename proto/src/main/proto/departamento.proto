@@ -8,16 +8,16 @@ message DepartamentoDTO {
     string descricao = 2;
 }
 
-message categoriaRequest {
+message departamentoRequest {
     int64 codigo =1;
 }
 message DepartamentoResponse {
     repeated DepartamentoDTO categorias =1;
 }
 
-message emptyCategoria {}
+message emptyDepartamento {}
 
 service DepartamentoService {
     rpc salvarDepartamento(DepartamentoDTO) returns (DepartamentoDTO);
-    rpc obterDepartamentos(emptyCategoria) returns (DepartamentoResponse);
+    rpc obterDepartamentos(emptyDepartamento) returns (DepartamentoResponse);
 }

@@ -15,9 +15,9 @@ message OrcamentoResponse {
     repeated OrcamentoDTO orcamentos =1;
 }
 
-message emptyCategoria {}
+message emptyOrcamento{}
 
 service OrcamentoService {
     rpc salvarOrcamento(OrcamentoDTO) returns (OrcamentoDTO);
-    rpc obterOrcamentos(emptyCategoria) returns (OrcamentoResponse);
+    rpc obterOrcamentos(emptyOrcamento) returns (OrcamentoResponse);
 }

@@ -17,7 +17,7 @@ message PagamentoResponse {
 
 message emptyPagamento {}
 
-service OrcamentoService {
+service PagamentoService {
     rpc salvarPagamento(PagamentoDTO) returns (PagamentoDTO);
     rpc obterOrcamentos(emptyPagamento) returns (PagamentoResponse);
 }
